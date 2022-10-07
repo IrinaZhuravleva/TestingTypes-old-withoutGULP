@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовый проект</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <button id="HideObjectives">Hide Objectives</button>
+    <button id="HideBasis">Hide Basis</button>
+    <button id="HideObjects">Hide Objects</button>
+    <button id="HideDefects">Hide Defects</button>
+    <button id="HideApproaches">Hide Approaches</button>
+    <div class="container">
+      <div class="testing">
+        <h2>Component Testing</h2>
+        <div class="block block-objectives">
+          <h3>Objectives of component testing</h3>
+          <ul></ul>
+          <li>Reducing risk</li>
+          <li>Verifying whether the functional and non-functional behaviors of the component are as designed and specified</li>
+          <li>Building confidence in the component’s quality</li>
+          <li>Finding defects in the component</li>
+          <li>Preventing defects from escaping to higher test levels</li>
+        </div>
+        <div class="block block-basis">
+          <h3>Test basis</h3>
+          <ul></ul>
+          <li>Detailed design</li>
+          <li>Code</li>
+          <li>Data model</li>
+          <li>Component specifications</li>
+        </div>
+        <div class="block block-objects">
+          <h3>Test objects</h3>
+          <ul></ul>
+          <li>Components, units or modules</li>
+          <li>Code and data structures</li>
+          <li>Classes</li>
+          <li>Database modules</li>
+        </div>
+        <div class="block block-defects">
+          <h3>Typical defects and failures</h3>
+          <ul></ul>
+          <li>Incorrect functionality (e.g., not as described in design specifications)</li>
+          <li>Data flow problems</li>
+          <li>Incorrect code and logic</li>
+        </div>
+        <div class="block block-approaches">
+          <h3>Specific approaches and responsibilities</h3>
+          <p>Component testing is usually performed by the developer who wrote the code, but it at least requires access to the code being tested.</p>
+          <p>TDD or Test driven development is highly iterative and is based on cycles of developing automated test cases, then building and integrating small pieces of code, then executing the component tests, correcting any issues, and re-factoring the code. </p>
+        </div>
+      </div>
+      <div class="testing">
+        <h2>Integration Testing</h2>
+        <div class="block block-objectives">
+          <h3>Objectives</h3>
+          <ul></ul>
+          <li>Reducing risk</li>
+          <li>Verifying whether the functional and non-functional behaviors of the interfaces are as designed and specified</li>
+          <li>Building confidence in the quality of the interfaces</li>
+          <li>Finding defects (which may be in the interfaces themselves or within the components or systems)</li>
+          <li>Preventing defects from escaping to higher test levels</li>
+        </div>
+        <div class="block block-basis">
+          <h3>Test basis</h3>
+          <ul></ul>
+          <li>Software and system design</li>
+          <li>Sequence diagrams</li>
+          <li>Interface and communication protocol specifications</li>
+          <li>Use cases</li>
+          <li>Architecture at component or system level</li>
+          <li>Workflows</li>
+          <li>External interface definitions</li>
+        </div>
+        <div class="block block-objects">
+          <h3>Test objects</h3>
+          <ul></ul>
+          <li>Subsystems</li>
+          <li>Databases</li>
+          <li>Infrastructure</li>
+          <li>Interfaces</li>
+          <li>APIs</li>
+          <li>Microservices</li>
+        </div>
+        <div class="block block-defects">
+          <h3>Typical defects and failures for component integration testing</h3>
+          <ul></ul>
+          <li>Incorrect data, missing data, or incorrect data encoding</li>
+          <li>Incorrect sequencing or timing of interface calls</li>
+          <li>Interface mismatch</li>
+          <li>Failures in communication between components</li>
+          <li>Unhandled or improperly handled communication failures between components</li>
+          <li>Incorrect assumptions about the meaning, units, or boundaries of the data being passed between components</li>
+          <h3>Typical defects and failures for system integration testing</h3>
+          <ul></ul>
+          <li>Inconsistent message structures between systems</li>
+          <li>Incorrect data, missing data, or incorrect data encoding</li>
+          <li>Interface mismatch</li>
+          <li>Failures in communication between systems</li>
+          <li>Unhandled or improperly handled communication failures between systems</li>
+          <li>Incorrect assumptions about the meaning, units, or boundaries of the data being passed between systems</li>
+          <li>Failure to comply with mandatory security regulations</li>
+        </div>
+        <div class="block block-approaches">
+          <h3>Specific approaches and responsibilities</h3>
+          <p>Functional, non-functional, and structural test types are applicable.</p>
+          <p>Component integration testing is often the responsibility of developers. System integration testing is generally the responsibility of testers.</p>
+          <p>Integration should normally be incremental (i.e., a small number of additional components or systems at a time)</p>
+          <p>The greater the scope of integration, the more difficult it becomes to isolate defects to a specific component or system, which may lead to increased risk and additional time for troubleshooting. This is one reason that continuous integration, where software is integrated on a component-by-component basis (i.e., functional integration), has become common practice. </p>
+        </div>
+      </div>
+      <div class="testing">
+        <h2>System Testing</h2>
+        <div class="block block-objectives">
+          <h3>Objectives</h3>
+          <ul></ul>
+          <li>Reducing risk</li>
+          <li>Verifying whether the functional and non-functional behaviors of the system are as designed and specified</li>
+          <li>Validating that the system is complete and will work as expected</li>
+          <li>Building confidence in the quality of the system as a whole</li>
+          <li>Finding defects</li>
+          <li>Preventing defects from escaping to higher test levels</li>
+        </div>
+        <div class="block block-basis">
+          <h3>Test basis</h3>
+          <ul></ul>
+          <li>System and software requirement specifications (functional and non-functional)</li>
+          <li>Risk analysis reports</li>
+          <li>Use cases</li>
+          <li>Epics and user stories</li>
+          <li>Models of system behavior</li>
+          <li>State diagrams</li>
+          <li>System and user manuals</li>
+        </div>
+        <div class="block block-objects">
+          <h3>Test objects</h3>
+          <ul></ul>
+          <li>Applications</li>
+          <li>Hardware/software systems</li>
+          <li>Operating systems</li>
+          <li>System under test (SUT)</li>
+          <li>System configuration and configuration data</li>
+        </div>
+        <div class="block block-defects">
+          <h3>Typical defects and failures</h3>
+          <ul></ul>
+          <li>Incorrect calculations</li>
+          <li>Incorrect or unexpected system functional or non-functional behavior</li>
+          <li>Incorrect control and/or data flows within the system</li>
+          <li>Failure to properly and completely carry out end-to-end functional tasks</li>
+          <li>Failure of the system to work properly in the production environment(s)</li>
+          <li>Failure of the system to work as described in system and user manuals</li>
+        </div>
+        <div class="block block-approaches">
+          <h3>Specific approaches and responsibilities</h3>
+          <p>System testing should focus on the overall, end-to-end behavior of the system as a whole, both functional and non-functional.</p>
+          <p>A decision table may be created to verify whether functional behavior is as described in business rules.</p>
+          <p>Independent testers typically carry out system testing.</p>
+        </div>
+      </div>
+      <div class="testing">
+        <h2>Acceptance Testing</h2>
+        <div class="block block-objectives">
+          <h3>Objectives</h3>
+          <ul></ul>
+          <li>Establishing confidence in the quality of the system as a whole</li>
+          <li>Verifying that functional and non-functional behaviors of the system are as specified</li>
+          <li>Validating that the system is complete and will work as expected</li>
+        </div>
+        <div class="block block-basis">
+          <h3>Test basis/Examples of work products</h3>
+          <ul></ul>
+          <li>Business processes</li>
+          <li>User or business requirements</li>
+          <li>Regulations, legal contracts and standards</li>
+          <li>Use cases</li>
+          <li>System requirements</li>
+          <li>System or user documentation</li>
+          <li>Installation procedures</li>
+          <li>Risk analysis reports</li>
+          <li>Backup and restore procedures</li>
+          <li>Disaster recovery procedures</li>
+          <li>Non-functional requirements</li>
+          <li>Operations documentation</li>
+          <li>Deployment and installation instructions</li>
+          <li>Performance targets</li>
+          <li>Database packages</li>
+          <li>Security standards or regulations</li>
+          <li>Backup and restore procedures</li>
+          <li>Disaster recovery procedures</li>
+          <li>Non-functional requirements</li>
+          <li>Operations documentation</li>
+          <li>Deployment and installation instructions</li>
+          <li>Performance targets</li>
+          <li>Database packages</li>
+          <li>Security standards or regulations</li>
+        </div>
+        <div class="block block-objects">
+          <h3>Test objects</h3>
+          <ul></ul>
+          <li>System under test</li>
+          <li>System configuration and configuration data</li>
+          <li>Business processes for a fully integrated system</li>
+          <li>Recovery systems and hot sites (for business continuity and disaster recovery testing)</li>
+          <li>Operational and maintenance processes</li>
+          <li>Forms</li>
+          <li>Reports</li>
+          <li>Existing and converted production data</li>
+        </div>
+        <div class="block block-defects">
+          <h3>Typical defects and failures</h3>
+          <ul></ul>
+          <li>System workflows do not meet business or user requirements</li>
+          <li>Business rules are not implemented correctly</li>
+          <li>System does not satisfy contractual or regulatory requirements</li>
+          <li>Non-functional failures such as security vulnerabilities, inadequate performance efficiency under high loads, or improper operation on a supported platform</li>
+        </div>
+        <div class="block block-approaches">
+          <h3>Specific approaches and responsibilities</h3>
+          <p>Acceptance testing is often the responsibility of the customers, business users, product owners, or operators of a system, and other stakeholders may be involved as well.</p>
+          <p>Acceptance testing of a COTS software product may occur when it is installed or integrated</p>
+          <p>Acceptance testing of a new functional enhancement may occur before system testing</p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
